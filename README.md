@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://docs.dyxy.io/logo/dark.svg" alt="DYXY" height="48">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://docs.dyxy.io/logo/dark.svg">
+    <img src="https://docs.dyxy.io/logo/light.svg" alt="DYXY" height="48">
+  </picture>
 </p>
 
 # DYXY Trading bots

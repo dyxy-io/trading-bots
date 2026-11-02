@@ -7,7 +7,7 @@
 
 # DYXY Trading bots
 
-How DYXY's DCA and Grid bots work: strategy logic, parameters, formulas and worked examples. Bots run on spot or futures and execute on Hyperliquid.
+How DYXY's DCA and Grid bots work: strategy logic, parameters, formulas and worked examples. Bots run on spot or futures and execute on HyperEVM.
 
 > This repository describes how the product works. It does not contain DYXY source code. User guide: [docs.dyxy.io/bots](https://docs.dyxy.io/bots/overview).
 
@@ -25,14 +25,14 @@ How DYXY's DCA and Grid bots work: strategy logic, parameters, formulas and work
 
 ```mermaid
 flowchart LR
-    W["User wallet"] -- deposit / withdraw --> BB["Bots balance<br/>Hyperliquid contracts"]
+    W["User wallet"] -- deposit / withdraw --> BB["Bots balance<br/>HyperEVM contracts"]
     BB -- reserves investment --> B1["DCA bot"]
     BB -- reserves investment --> B2["Grid bot"]
-    B1 --> HL["Hyperliquid order book<br/>spot or perps"]
+    B1 --> HL["HyperEVM order book<br/>spot or perps"]
     B2 --> HL
 ```
 
-- Bots trade from a dedicated **bots balance** held in Hyperliquid contracts, separate from the perps and Degen balances.
+- Bots trade from a dedicated **bots balance** held in HyperEVM contracts, separate from the perps and Degen balances.
 - Creating a bot reserves its investment from the bots balance. Stopping it releases unused funds back to the bots balance.
 - Every bot runs on **spot** (long only, no liquidation) or **futures** (long, short or neutral, with leverage).
 

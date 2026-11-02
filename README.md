@@ -40,7 +40,7 @@ flowchart LR
 
 | | Spot | Futures |
 | --- | --- | --- |
-| Trades | The asset itself | Perpetual futures on the asset |
+| Trades | The asset itself | Perpetuals on the asset |
 | Direction | Long | Long, short, neutral (grid) |
 | Leverage | None | Adjustable |
 | Liquidation | None | Possible |

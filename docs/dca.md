@@ -31,7 +31,7 @@ flowchart TB
 | Stop loss (optional) | Loss from average entry that ends the round, optionally the bot |
 | Trigger price (optional) | Bot starts only when price reaches it |
 | Price range (optional) | Range in which a new base order may open |
-| Leverage (futures) | Multiplies size and risk |
+| Leverage (perp) | Multiplies size and risk |
 
 ## Formulas
 
@@ -76,4 +76,4 @@ TP at ≈ $3,907. Selling 0.0791 ETH returns ≈ $309, a profit of ≈ $9 before
 | Tighter deviation, more safety orders | Fills and exits sooner, budget runs out faster in deep drops |
 | Deviation multiplier > 1 | Keeps capacity for larger drops |
 | Size multiplier > 1 | Average entry falls fast, later orders grow fast |
-| Futures | Each safety order increases size and moves the liquidation price; check the worst case with all safety orders filled |
+| Perp | Each safety order increases size and moves the liquidation price; check the worst case with all safety orders filled |

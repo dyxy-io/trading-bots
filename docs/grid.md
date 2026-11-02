@@ -28,11 +28,11 @@ If the price leaves the range, the bot pauses trading until it returns, unless a
 | Number of grids | Levels in the range |
 | Grid type | Arithmetic (fixed step in price) or geometric (fixed step in percent) |
 | Investment | Total funds, divided across levels |
-| Mode (futures) | Neutral, long or short |
-| Leverage (futures) | Multiplies order sizes and risk |
+| Mode (perp) | Neutral, long or short |
+| Leverage (perp) | Multiplies order sizes and risk |
 | Trigger price (optional) | Starts the bot at a set price |
 | TP / SL (optional) | Stops the bot at a price or a total profit or loss |
-| Close position on stop | Sell holdings or close the futures position when stopping |
+| Close position on stop | Sell holdings or close the perp position when stopping |
 
 ## Formulas
 
@@ -63,7 +63,7 @@ The profit per grid must stay well above the trading fee for one buy and one sel
 | Profit per grid | Higher % at low prices | Equal % everywhere |
 | Best for | Narrow ranges | Wide ranges, volatile assets |
 
-## Futures modes
+## Perp modes
 
 | Mode | Start | Profits from |
 | --- | --- | --- |

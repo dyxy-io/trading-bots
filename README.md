@@ -7,7 +7,7 @@
 
 # DYXY Trading bots
 
-How DYXY's DCA and Grid bots work: strategy logic, parameters, formulas and worked examples. Bots run on spot or futures and execute on HyperEVM.
+How DYXY's DCA and Grid bots work: strategy logic, parameters, formulas and worked examples. Bots run on spot or perps and execute on HyperEVM.
 
 > This repository describes how the product works. It does not contain DYXY source code. User guide: [docs.dyxy.io/bots](https://docs.dyxy.io/bots/overview).
 
@@ -34,11 +34,11 @@ flowchart LR
 
 - Bots trade from a dedicated **bots balance** held in HyperEVM contracts, separate from the perps and Degen balances.
 - Creating a bot reserves its investment from the bots balance. Stopping it releases unused funds back to the bots balance.
-- Every bot runs on **spot** (long only, no liquidation) or **futures** (long, short or neutral, with leverage).
+- Every bot runs on **spot** (long only, no liquidation) or **perps** (long, short or neutral, with leverage).
 
-## Spot or futures
+## Spot or perp
 
-| | Spot | Futures |
+| | Spot | Perp |
 | --- | --- | --- |
 | Trades | The asset itself | Perpetuals on the asset |
 | Direction | Long | Long, short, neutral (grid) |
@@ -64,7 +64,7 @@ On stop the user chooses to **close the position** at market or **keep the posit
 
 ## Fees
 
-The standard DYXY trading fee applies to every order a bot fills, 10% lower with a referral code. Futures bots also pay or receive funding. There is no subscription and no fee for creating or stopping a bot.
+The standard DYXY trading fee applies to every order a bot fills, 10% lower with a referral code. Perp bots also pay or receive funding. There is no subscription and no fee for creating or stopping a bot.
 
 ## License
 
